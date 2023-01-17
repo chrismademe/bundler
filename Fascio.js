@@ -1,3 +1,7 @@
+const yargs = require('yargs/yargs');
+const { hideBin } = require('yargs/helpers');
+const argv = yargs(hideBin(process.argv)).argv;
+
 const compilers = {
 	scss: require('./lib/compilers/scss'),
 	js: require('./lib/compilers/javascript'),
