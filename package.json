@@ -1,32 +1,25 @@
 {
-	"name": "bundler",
+	"name": "fascio",
 	"version": "0.1.0",
 	"description": "A simple asset bundler for frontend assets",
 	"main": "cli.js",
-	"scripts": {
-		"dev": "node ./lib/CLI.js --dir=example --watch",
-		"build": "node ./lib/CLI.js --dir=example"
-	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/chrismademe/bundler.git"
+		"url": "git+https://github.com/chrismademe/fascio.git"
 	},
 	"author": "Chris Galbraith",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/chrismademe/bundler/issues"
+		"url": "https://github.com/chrismademe/fascio/issues"
 	},
-	"homepage": "https://github.com/chrismademe/bundler#readme",
+	"homepage": "https://github.com/chrismademe/fascio#readme",
 	"dependencies": {
 		"chalk": "^3.0.0",
 		"chokidar": "^3.5.3",
 		"clean-css": "^5.1.2",
-		"cosmiconfig": "^8.0.0",
-		"date-diff": "^1.0.2",
 		"esbuild": "^0.12.9",
 		"fs-extra": "^11.1.0",
 		"glob": "^8.1.0",
-		"globby": "^5.0.0",
 		"http": "^0.0.1-security",
 		"sass": "^1.34.1",
 		"serve-handler": "^6.1.5",

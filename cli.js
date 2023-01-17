@@ -12,7 +12,7 @@ try {
 	const isWatching = argv?.watch || false;
 	const isServing = argv?.serve || false;
 	const watchEvents = ['add', 'change', 'unlink', 'addDir', 'unlinkDir'];
-	const pathToConfig = [process.cwd(), argv?.dir || '', 'bundler.js'].join('/');
+	const pathToConfig = [process.cwd(), argv?.dir || '', 'fascio.config.js'].join('/');
 	const userConfig = require(pathToConfig);
 
 	userConfig(isWatching);
