@@ -1,8 +1,8 @@
 {
 	"name": "fascio",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "A simple asset bundler for frontend assets",
-	"main": "cli.js",
+	"main": "Fascio.js",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/chrismademe/fascio.git"

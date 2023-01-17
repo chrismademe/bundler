@@ -1,7 +1,7 @@
 const compilers = {
-	scss: require('./compilers/scss'),
-	js: require('./compilers/javascript'),
-	copy: require('./compilers/copy'),
+	scss: require('./lib/compilers/scss'),
+	js: require('./lib/compilers/javascript'),
+	copy: require('./lib/compilers/copy'),
 };
 
 class Fascio {
