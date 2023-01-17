@@ -1,6 +1,6 @@
 {
 	"name": "fascio",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "A simple asset bundler for frontend assets",
 	"main": "cli.js",
 	"repository": {
@@ -28,5 +28,8 @@
 		"serve-handler": "^6.1.5",
 		"uglify-js": "^3.17.4",
 		"yargs": "^17.6.2"
+	},
+	"bin": {
+		"fascio": "./cli.js"
 	}
 }
