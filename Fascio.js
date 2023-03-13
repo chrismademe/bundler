@@ -1,11 +1,14 @@
-const yargs = require('yargs/yargs');
-const { hideBin } = require('yargs/helpers');
+import yargs from 'yargs/yargs';
+import { hideBin } from 'yargs/helpers';
+import scss from './lib/compilers/scss.js';
+import js from './lib/compilers/javascript.js';
+import copy from './lib/compilers/copy.js';
 const argv = yargs(hideBin(process.argv)).argv;
 
 const compilers = {
-	scss: require('./lib/compilers/scss'),
-	js: require('./lib/compilers/javascript'),
-	copy: require('./lib/compilers/copy'),
+	scss: scss,
+	js: js,
+	copy: copy
 };
 
 class Fascio {
@@ -32,10 +35,7 @@ class Fascio {
 	 * @param {string} options.dest
 	 */
 	static js = (src, options = {}) => {
-		if (!options?.dest) {
-			options.dest = src.replace('src', 'dist');
-		}
-		return compilers.js(src, options.dest, options).compile();
+		return compilers.js(src, options).compile();
 	};
 
 	/**
@@ -43,14 +43,11 @@ class Fascio {
 	 *
 	 * Copies files from one location to another
 	 * @param {string} src
-	 * @param {string} dest
+	 * @param {object} options
 	 */
-	static copy = (src, dest = '') => {
-		if (!dest) {
-			options.dest = src.replace('src', 'dist');
-		}
-		return compilers.copy(src, dest).compile();
+	static copy = (src, options) => {
+		return compilers.copy(src, options).compile();
 	};
 }
 
-module.exports = Fascio;
+export default Fascio;

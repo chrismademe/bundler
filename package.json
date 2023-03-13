@@ -3,6 +3,7 @@
 	"version": "0.2.0",
 	"description": "A simple asset bundler for frontend assets",
 	"main": "Fascio.js",
+	"type": "module",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/chrismademe/fascio.git"
@@ -20,7 +21,9 @@
 		"chalk": "^3.0.0",
 		"chokidar": "^3.5.3",
 		"clean-css": "^5.1.2",
-		"esbuild": "^0.12.9",
+		"esbuild": "^0.17.11",
+		"esbuild-sass-glob": "^1.0.8",
+		"esbuild-sass-plugin": "^2.6.0",
 		"fs-extra": "^11.1.0",
 		"glob": "^8.1.0",
 		"http": "^0.0.1-security",
