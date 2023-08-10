@@ -1,14 +1,18 @@
-import yargs from 'yargs/yargs';
 import { hideBin } from 'yargs/helpers';
-import scss from './lib/compilers/scss.js';
-import js from './lib/compilers/javascript.js';
+import yargs from 'yargs/yargs';
+
 import copy from './lib/compilers/copy.js';
+import js from './lib/compilers/javascript.js';
+import postcss from './lib/compilers/postcss.js';
+import scss from './lib/compilers/scss.js';
+
 const argv = yargs(hideBin(process.argv)).argv;
 
 const compilers = {
 	scss: scss,
+	postcss: postcss,
 	js: js,
-	copy: copy
+	copy: copy,
 };
 
 class Fascio {
@@ -23,6 +27,18 @@ class Fascio {
 	 */
 	static scss = (src, options = {}) => {
 		return compilers.scss(src, options).compile();
+	};
+
+	/**
+	 * PostCSS
+	 *
+	 * Watches and compiles PostCSS files
+	 * @param {mixed} src
+	 * @param {object} options
+	 * @param {array} options.extensions
+	 */
+	static postcss = (src, options = {}) => {
+		return compilers.postcss(src, options).compile();
 	};
 
 	/**
