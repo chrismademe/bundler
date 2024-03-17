@@ -5,6 +5,7 @@ import copy from './lib/compilers/copy.js';
 import js from './lib/compilers/javascript.js';
 import postcss from './lib/compilers/postcss.js';
 import scss from './lib/compilers/scss.js';
+import Watcher from './lib/Watcher.js';
 
 const argv = yargs(hideBin(process.argv)).argv;
 
@@ -66,4 +67,5 @@ class Fascio {
 	};
 }
 
+export { Watcher };
 export default Fascio;
