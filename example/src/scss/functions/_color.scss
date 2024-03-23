@@ -1,0 +1,7 @@
+@function color($key) {
+	@if map-has-key(token('color'), $key) {
+		@return map-get(token('color'), $key);
+	}
+
+	@warn "No color found for key: #{$key}";
+}

@@ -1,0 +1,11 @@
+@if (config('utilities.emailAddress', true)) {
+	/**
+	* Reverses the letters in an email address
+	* You should use this with something like Nunjucks "reverse" filter.
+	* It helps stop spam bots.
+	*/
+	.email-address {
+		unicode-bidi: bidi-override;
+		direction: rtl;
+	}
+}

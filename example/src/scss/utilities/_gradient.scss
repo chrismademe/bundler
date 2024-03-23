@@ -1,0 +1,39 @@
+@use 'sass:math';
+
+@if (config('utilities.gradient')) {
+	.gradient {
+		background-image: linear-gradient(var(--gradient-direction, to bottom), var(--gradient-from), var(--gradient-to));
+	}
+
+	.gradient.horizontal {
+		--gradient-direction: to right;
+	}
+
+	.gradient.diagonal {
+		--gradient-direction: to bottom left;
+	}
+
+	// Colours
+	@each $token, $value in token('color') {
+		.from-#{$token} {
+			--gradient-from-opacity: 1;
+			--gradient-from: #{rgba($value, var(--gradient-from-opacity))};
+		}
+
+		.to-#{$token} {
+			--gradient-to-opacity: 1;
+			--gradient-to: #{rgba($value, var(--gradient-to-opacity))};
+		}
+	}
+
+	// Opacity
+	@for $i from 0 through 10 {
+		.from-opacity-#{$i} {
+			--gradient-from-opacity: #{math.div($i, 10)};
+		}
+
+		.to-opacity-#{$i} {
+			--gradient-to-opacity: #{math.div($i, 10)};
+		}
+	}
+}

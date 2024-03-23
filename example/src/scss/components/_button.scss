@@ -1,0 +1,50 @@
+.button {
+	--button-color: var(--color-text);
+	--button-border: 2px solid var(--button-color);
+	--button-background-color: transparent;
+	--button-padding: var(--space-3) var(--space-12);
+	--button-radius: 0;
+
+	align-items: center;
+	appearance: none;
+	background-color: var(--button-background-color);
+	border-radius: var(--button-radius, var(--radius-base));
+	border: var(--button-border, 0);
+	box-shadow: var(--button-shadow, none);
+	color: var(--button-color);
+	display: inline-flex;
+	font-size: var(--button-font-size, inherit);
+	gap: var(--space-2);
+	justify-content: center;
+	min-width: var(--button-min-width, 5rem);
+	padding: var(--button-padding);
+	text-align: center;
+	text-decoration: none;
+	transition: var(--button-transition, all 400ms ease-in-out);
+	width: max-content;
+}
+
+.button:hover,
+.button:focus {
+	--button-background-color: var(--color-background);
+	--button-color: var(--color-text);
+	--button-shadow: var(--shadow-lg);
+	--button-transition: all 150ms ease-in-out;
+}
+
+.button--sm {
+	--button-padding: var(--space-2) var(--space-10);
+}
+
+.button--lg {
+	--button-padding: var(--space-3) var(--space-20);
+	--button-font-size: var(--size-lg);
+}
+
+@each $key, $value in token('color') {
+	.button--#{$key},
+	.button.is-style-#{$key} {
+		--button-background-color: #{$value};
+		--button-color: #{auto-color($value)};
+	}
+}

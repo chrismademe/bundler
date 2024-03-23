@@ -1,0 +1,11 @@
+@if (config('utilities.shadow', true)) {
+	@each $token, $value in token('shadow') {
+		.shadow-#{$token} {
+			box-shadow: #{$value};
+		}
+
+		.text-shadow-#{$token} {
+			text-shadow: #{$value};
+		}
+	}
+}

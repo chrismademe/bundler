@@ -1,0 +1,13 @@
+@if (config('utilities.container', true)) {
+	/** Container Utility **/
+	:root {
+		--container-max-width: 80rem;
+	}
+
+	.container {
+		margin-inline: auto;
+		max-width: var(--container-max-width, 80rem);
+		padding-inline: var(--space-page);
+		width: 100%; // Fixes the element shrinking to content width when inside a flex parent
+	}
+}

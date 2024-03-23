@@ -1,0 +1,10 @@
+@if (config('utilities.background', true)) {
+	[class^='bg-'] {
+		background-image: var(--image);
+	}
+
+	.bg-cover {
+		background-position: center;
+		background-size: cover;
+	}
+}

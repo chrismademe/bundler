@@ -1,0 +1,16 @@
+@if (config('utilities.cluster', true)) {
+	.cluster {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: var(--gap, var(--space-2));
+	}
+
+	/**
+     * Set the default justify-content with a :where for low specificity
+     * so we can override it easily with our alignment utilities.
+     */
+	:where(.cluster) {
+		justify-content: start;
+	}
+}

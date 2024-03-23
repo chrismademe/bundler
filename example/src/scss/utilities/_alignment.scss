@@ -1,0 +1,34 @@
+@if (config('utilities.alignment', true)) {
+	/**
+	 * Alignment Utilities
+	 *
+	 * These utilities are meant to be used with Grid or Flex properties
+	 */
+	.items-start {
+		align-items: start;
+	}
+
+	.items-center {
+		align-items: center;
+	}
+
+	.items-end {
+		align-items: end;
+	}
+
+	.justify-start {
+		justify-content: start;
+	}
+
+	.justify-center {
+		justify-content: center;
+	}
+
+	.justify-between {
+		justify-content: space-between;
+	}
+
+	.justify-end {
+		justify-content: end;
+	}
+}

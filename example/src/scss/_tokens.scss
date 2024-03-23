@@ -1,0 +1,104 @@
+$tokens: (
+	"breakpoints": (
+		"sm": 460px,
+		"md": 768px,
+		"lg": 1024px,
+	),
+	"color": (
+		"background": white,
+		"text": #191a22,
+		"primary": #43aa8b,
+		"secondary": #f9844a,
+		"gray-90": #373946,
+		"gray-70": #565869,
+		"gray-50": #77798a,
+		"gray-30": #b3b4bd,
+		"gray-10": #eeeef0,
+		"neutral": #277da1,
+		"negative": #f94144,
+		"positive": #90be6d,
+		"warning": #f5af4b,
+		"white": #fff,
+		"facebook": #1877f2,
+		"twitter": #1da1f2,
+		"instagram": #c13584,
+		"pinterest": #e60023,
+	),
+	"font": (
+		"base":
+			"-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol",
+	),
+	"weight": (
+		"normal": 400,
+		"bold": 700,
+	),
+	"size": (
+		"xs": 0.75rem,
+		"sm": 0.83rem,
+		"base": 1rem,
+		"lg": 1.2rem,
+		"xl": 1.44rem,
+		"2xl": 1.728rem,
+		"3xl": 2.074rem,
+		"4xl": 2.488rem,
+		"5xl": 2.986rem,
+	),
+	"space": (
+		"1": 0.25rem,
+		"2": 0.5rem,
+		"3": 0.75rem,
+		"4": 1rem,
+		"5": 1.25rem,
+		"6": 1.5rem,
+		"8": 2rem,
+		"10": 2.5rem,
+		"12": 3rem,
+		"16": 4rem,
+		"20": 5rem,
+		"24": 6rem,
+		"28": 7rem,
+		"32": 8rem,
+		"40": 10rem,
+		"48": 12rem,
+		"56": 14rem,
+		"64": 16rem,
+		"page": clamp(2rem, 1.3636rem + 5.6818vw, 5rem),
+		"px": 0.06rem,
+		"half": 0.125rem,
+	),
+	"max-width": (
+		"sm": 60ch,
+		"lg": 85ch,
+	),
+	"leading": (
+		"none": 1,
+		"tight": 1.1,
+		"base": 1.6,
+		"loose": 1.9,
+	),
+	"tracking": (
+		"tight": -0.025em,
+		"base": auto,
+		"wide": 0.05em,
+		"loose": 0.1em,
+	),
+	"radius": (
+		"base": 0.25rem,
+		"full": 99999px,
+	),
+	"shadow": (
+		"sm":
+			"0 0.1rem 0.2rem rgba(0, 0, 0, 0.05), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.05)",
+		"base":
+			"0 0.1rem 0.2rem rgba(0, 0, 0, 0.05), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.05), 0 0.4rem 0.6rem rgba(0, 0, 0, 0.05)",
+		"lg":
+			"0 0.2rem 0.4rem rgba(0, 0, 0, 0.05), 0 0.4rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.6rem 1rem rgba(0, 0, 0, 0.05)",
+		"xl":
+			"0 0.2rem 0.4rem rgba(0, 0, 0, 0.05), 0 0.6rem 0.8rem rgba(0, 0, 0, 0.05), 0 0.8rem 1.2rem rgba(0, 0, 0, 0.05), 0 1rem 1.6rem rgba(0, 0, 0, 0.05)",
+		"2xl":
+			"0 0.4rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.8rem 1rem rgba(0, 0, 0, 0.05), 0 1rem 1.4rem rgba(0, 0, 0, 0.05), 0 1.2rem 2rem rgba(0, 0, 0, 0.05), 0 1.4rem 2.2rem rgba(0, 0, 0, 0.05)",
+	),
+	"aspect-ratio": (
+		"1": 1,
+	),
+);

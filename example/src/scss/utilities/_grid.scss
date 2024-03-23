@@ -1,0 +1,49 @@
+@if (config('utilities.grid', true)) {
+	$grid-columns: config('utilities.grid.columns', 4);
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(var(--grid-columns, 1), 1fr);
+		gap: var(--gap);
+	}
+
+	/** Auto Grid **/
+	.auto-grid,
+	.grid-auto {
+		grid-template-columns: repeat(auto-fit, minmax(var(--min-width, 10rem), 1fr));
+	}
+
+	@for $i from 1 through $grid-columns {
+		.cols-#{$i} {
+			--grid-columns: #{$i};
+		}
+
+		.col-start-#{$i} {
+			grid-column-start: #{$i};
+		}
+
+		.col-span-#{$i} {
+			grid-column-end: span #{$i};
+		}
+	}
+
+	@if (config('utilities.grid.responsiveVariants')) {
+		@each $breakpoint, $value in token('breakpoints') {
+			@media (min-width: $value) {
+				@for $i from 1 through $grid-columns {
+					.#{$breakpoint}\:cols-#{$i} {
+						grid-template-columns: repeat(#{$i}, 1fr);
+					}
+
+					.#{$breakpoint}\:col-start-#{$i} {
+						grid-column-start: #{$i};
+					}
+
+					.#{$breakpoint}\:col-span-#{$i} {
+						grid-column-end: span #{$i};
+					}
+				}
+			}
+		}
+	}
+}
