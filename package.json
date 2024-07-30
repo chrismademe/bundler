@@ -1,6 +1,6 @@
 {
 	"name": "fascio",
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"description": "A simple asset bundler for frontend assets",
 	"main": "Fascio.js",
 	"type": "module",

@@ -1,6 +1,3 @@
-import { hideBin } from 'yargs/helpers';
-import yargs from 'yargs/yargs';
-
 import copy from './lib/compilers/copy.js';
 import js from './lib/compilers/javascript.js';
 import postcss from './lib/compilers/postcss.js';
@@ -9,8 +6,6 @@ import scss from './lib/compilers/scss.js';
 import svelte from './lib/compilers/svelte.js';
 import vue from './lib/compilers/vue.js';
 import Watcher from './lib/Watcher.js';
-
-const argv = yargs(hideBin(process.argv)).argv;
 
 const compilers = {
 	copy,
@@ -31,8 +26,8 @@ class Fascio {
 	 * @param {string} options.output
 	 * @param {boolean} options.minify
 	 */
-	static scss = (src, options = {}) => {
-		return compilers.scss(src, options).compile();
+	static scss = async (src, options = {}) => {
+		return await compilers.scss(src, options).compile();
 	};
 
 	/**
@@ -42,8 +37,8 @@ class Fascio {
 	 * @param {object} options
 	 * @param {array} options.extensions
 	 */
-	static postcss = (src, options = {}) => {
-		return compilers.postcss(src, options).compile();
+	static postcss = async (src, options = {}) => {
+		return await compilers.postcss(src, options).compile();
 	};
 
 	/**
@@ -53,8 +48,8 @@ class Fascio {
 	 * @param {object} options
 	 * @param {string} options.dest
 	 */
-	static js = (src, options = {}) => {
-		return compilers.js(src, options).compile();
+	static js = async (src, options = {}) => {
+		return await compilers.js(src, options).compile();
 	};
 
 	/**
@@ -64,8 +59,8 @@ class Fascio {
 	 * @param {object} options
 	 * @param {string} options.dest
 	 */
-	static svelte = (src, options = {}) => {
-		return compilers.svelte(src, options).compile();
+	static svelte = async (src, options = {}) => {
+		return await compilers.svelte(src, options).compile();
 	};
 
 	/**
@@ -75,8 +70,8 @@ class Fascio {
 	 * @param {object} options
 	 * @param {string} options.dest
 	 */
-	static vue = (src, options = {}) => {
-		return compilers.vue(src, options).compile();
+	static vue = async (src, options = {}) => {
+		return await compilers.vue(src, options).compile();
 	};
 
 	/**
@@ -86,8 +81,8 @@ class Fascio {
 	 * @param {object} options
 	 * @param {string} options.dest
 	 */
-	static react = (src, options = {}) => {
-		return compilers.react(src, options).compile();
+	static react = async (src, options = {}) => {
+		return await compilers.react(src, options).compile();
 	};
 
 	/**
@@ -96,8 +91,8 @@ class Fascio {
 	 * @param {string} src
 	 * @param {object} options
 	 */
-	static copy = (src, options) => {
-		return compilers.copy(src, options).compile();
+	static copy = async (src, options) => {
+		return await compilers.copy(src, options).compile();
 	};
 }
 
